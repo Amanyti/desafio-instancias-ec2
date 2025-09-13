@@ -4,9 +4,8 @@ Repositório criado para o Desafio Instâncias EC2.
 Contém imagens do projeto desenvolvido no **draw.io**, exemplos de arquitetura de sistemas na AWS e as anotações pessoais do meu entendimento sobre os módulos do curso feitos até agora.
 
 
-## Módulo 1 – AWS
+## Módulo 1 – Introdução e Conceitos básicos
 
-### Conceito Geral
 - AWS significa **Amazon Web Services**.  
 - O nome "Amazon" foi inspirado no rio Amazonas, o maior do mundo, para transmitir a ideia de grandeza e escalabilidade.  
 - Foi uma das pioneiras em computação em nuvem e hoje é líder mundial no setor.  
@@ -14,7 +13,7 @@ Contém imagens do projeto desenvolvido no **draw.io**, exemplos de arquitetura 
 
 
 
-## Módulo 2 – EC2, Armazenamento e Serviços Gerenciados
+## Módulo 2 – Computação na nuvem
 
 ### Instâncias EC2
 - São máquinas virtuais na nuvem, configuráveis em sistema operacional, memória e processamento.  
@@ -59,7 +58,14 @@ Contém imagens do projeto desenvolvido no **draw.io**, exemplos de arquitetura 
 
 ## Exemplos de Arquitetura na AWS
 Nesta seção serão adicionadas imagens mostrando exemplos de arquiteturas de sistemas utilizando serviços da AWS.  
+- Esquemas do Desafio:
+<img width="600"  alt="Instancias_S3_Lambda_Dynamo drawio" src="https://github.com/user-attachments/assets/2217e197-ebda-4afb-9fee-6e3fefc69980" />
+<img width="600"  alt="Instancias_EBS_EC2 drawio" src="https://github.com/user-attachments/assets/7fa4d3b6-f51d-48b7-8bda-dac3770c78de" />
+
+- Esquemas mais Complexos:
+<img width="600"  alt="Captura de tela 2025-09-13 180650" src="https://github.com/user-attachments/assets/abf433ef-d4b9-41bf-a4aa-ceec6b4f6efb" />
 
 
+<img width="600"  alt="Captura de tela 2025-09-13 180715" src="https://github.com/user-attachments/assets/f86e2792-3083-4c86-9587-75ba3821b650" />
 
 
