@@ -111,4 +111,32 @@ Nesta seção serão adicionadas imagens mostrando exemplos de arquiteturas de s
 - Suporta diferentes tipos de balanceamento: **Application Load Balancer** (camada HTTP/HTTPS), **Network Load Balancer** (camada TCP/UDP), **Gateway Load Balancer** (segurança de rede) e **Classic Load Balancer** (HTTP/HTTPs e TCP entre EC2) .  
 - Funciona integrado com VPC, Auto Scaling e Security Groups.  
 
+## Módulo 5 – BVAnco de Dados na AWS
+
+### Amazon RDS (Relational Database Service)
+- Serviço PASS gerenciado de **banco de dados relacional** na AWS.  
+- Suporta motores como **MySQL, PostgreSQL, MariaDB, Oracle, SQL Server e Aurora**.  
+- Cuida de tarefas administrativas como **backup, patching, replicação e escalabilidade**.  
+- Permite configurar alta disponibilidade com **Multi-AZ** e replicação para leitura.  
+- Ideal para aplicações que precisam de **banco de dados estruturado e gerenciado**, sem se preocupar com infraestrutura.
+
+### Amazon DynamoDB
+- Banco de dados **NoSQL** para dados estruturados e não estruturados totalmente gerenciado pela AWS.  
+- Trabalha com modelos de **chave-valor** e **documentos**.  
+- Escalável automaticamente para lidar com grandes volumes de dados em tempo real.  
+- Oferece **baixa latência**, mesmo em milhões de requisições por segundo.  
+- Indicado para aplicações de **alta performance**, como jogos, IoT, sistemas de e-commerce e apps web/móveis.
+
+### Estratégias de Backup e Recuperação de Dados
+- Backups garantem a **disponibilidade e integridade** das informações mais importantes e cruciais em caso de falhas, exclusões acidentais ou desastres.  
+- Na AWS, serviços como **RDS** e **DynamoDB** oferecem backup automático e snapshots manuais.  
+- É importante definir uma **política de backup** com frequência adequada (diária, semanal, incremental).  
+- **Recuperação de desastres (Disaster Recovery – DR)** envolve ter dados replicados em múltiplas zonas de disponibilidade (Multi-AZ) ou até em diferentes regiões.  
+- Estratégias comuns incluem:
+  - **Avaliação e Planejamento**: RPO (margem que pode ser perdida entre os ciclos de backups) e RTO (limite de tempo que o sistema pode ficar parado antes de voltar ao funcionamento)
+  - **Backup and Restore**: restaurar dados a partir de snapshots.  
+  - **Pilot Light**: manter uma versão mínima do ambiente pronta para ser escalada.  
+  - ** Recuperação de Dados**: .  
+  - **Segurança e Conformidade**: criptografia, controles de acesso, .
+  - **Custo e Otimização**: .  
  
