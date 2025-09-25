@@ -12,7 +12,6 @@ Contém imagens do projeto desenvolvido no **draw.io**, exemplos de arquitetura 
 - Faz parte da empresa Amazon, fundada por **Jeff Bezos**.  
 
 
-
 ## Módulo 2 – Computação na nuvem com EC2
 
 ### Instâncias EC2
@@ -111,7 +110,8 @@ Nesta seção serão adicionadas imagens mostrando exemplos de arquiteturas de s
 - Suporta diferentes tipos de balanceamento: **Application Load Balancer** (camada HTTP/HTTPS), **Network Load Balancer** (camada TCP/UDP), **Gateway Load Balancer** (segurança de rede) e **Classic Load Balancer** (HTTP/HTTPs e TCP entre EC2) .  
 - Funciona integrado com VPC, Auto Scaling e Security Groups.  
 
-## Módulo 5 – BVAnco de Dados na AWS
+
+## Módulo 5 – Banco de Dados na AWS
 
 ### Amazon RDS (Relational Database Service)
 - Serviço PASS gerenciado de **banco de dados relacional** na AWS.  
@@ -138,5 +138,40 @@ Nesta seção serão adicionadas imagens mostrando exemplos de arquiteturas de s
   - **Pilot Light**: manter uma versão mínima do ambiente pronta para ser escalada.  
   - ** Recuperação de Dados**: .  
   - **Segurança e Conformidade**: criptografia, controles de acesso, .
-  - **Custo e Otimização**: .  
+  - **Custo e Otimização**: .
+
+ 
+## Módulo 6 - Serviçoes de Armazenamento e CDN
+
+### Amazon S3 Glacier
+- Serviço de armazenamento da AWS voltado para **arquivamento de longo prazo** e backup.  
+- Oferece custo muito baixo para armazenar grandes volumes de dados que não precisam ser acessados com frequência, com duração mínima de 90 dias.  
+- Possui diferentes classes de recuperação:  
+  - **Expedited**: minutos.  
+  - **Standard**: horas.  
+  - **Bulk**: até 12 horas (mais econômico).  
+- Os dados ficam criptografados e podem ser recuperados sob demanda.  
+- Indicado para conformidade, arquivamento histórico, registros e backups que raramente são acessados.
+
+### Família AWS Snow
+- Conjunto de dispositivos físicos fornecidos pela AWS para **transferência e migração de grandes volumes de dados**.  
+- Usado quando a rede não é suficiente para mover dados para a nuvem em tempo hábil.  
+- Principais opções:  
+  - **AWS Snowball Edge**: transporte em grande velocidades por meio de operadoras regionais.  
+  - **AWS Snowball**: maior capacidade, usado para dezenas ou centenas de terabytes.  
+  - **AWS Snowmobile**: caminhão equipado para transportar até 100 petabytes de dados.  
+- Suporta casos de uso como: migração de data centers, coleta de dados em campo e cenários de baixa conectividade.
+
+### Amazon CloudFront
+- Serviço de **Content Delivery Network (CDN)** da AWS.  
+- Distribui conteúdo (sites, vídeos, APIs e outros arquivos) com **baixa latência** e **alta velocidade de transferência**.  
+- Usa uma rede global de **edge locations** (pontos de presença - POP) para entregar conteúdo mais próximo do usuário final.  
+- Integra-se com outros serviços da AWS, como **S3, EC2, Elastic Load Balancer e Route 53**.  
+- Benefícios principais:  
+  - Redução de latência e aumento de performance.  
+  - Escalabilidade automática para lidar com picos de tráfego.  
+  - Segurança integrada com **AWS Shield** e **AWS WAF**.  
+ 
+
+
  
