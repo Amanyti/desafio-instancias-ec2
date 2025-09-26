@@ -82,8 +82,7 @@ Nesta seção serão adicionadas imagens mostrando exemplos de arquiteturas de s
 - Subdivisão de uma VPC em **segmentos menores de rede**.  
 - Pode ser **pública** (acesso à internet) ou **privada** (sem acesso direto à internet).  
 - Facilita organizar servidores e serviços de acordo com funções e regras de segurança.
-<img  height="250" alt="Captura de tela 2025-09-19 163947" src="https://github.com/user-attachments/assets/4b158914-bea6-49c5-ae92-fcb002f9b68b" />
-<img height="200" alt="Captura de tela 2025-09-19 163757" src="https://github.com/user-attachments/assets/d28cf23c-c546-4d77-8ff4-0597eb46752e" />
+- <img  height="250" alt="Captura de tela 2025-09-19 163947" src="https://github.com/user-attachments/assets/4b158914-bea6-49c5-ae92-fcb002f9b68b" /> <img height="200" alt="Captura de tela 2025-09-19 163757" src="https://github.com/user-attachments/assets/d28cf23c-c546-4d77-8ff4-0597eb46752e" />
 
 ### Security Group
 - Funciona como um **firewall virtual** para instâncias dentro da VPC.  
@@ -171,7 +170,53 @@ Nesta seção serão adicionadas imagens mostrando exemplos de arquiteturas de s
   - Redução de latência e aumento de performance.  
   - Escalabilidade automática para lidar com picos de tráfego.  
   - Segurança integrada com **AWS Shield** e **AWS WAF**.  
- 
 
+
+ ## Módulo 7 - Seviços Intermediários e Avançados
+
+### AWS Lambda
+- Serviço de **computação serverless** da AWS.  
+- Permite executar código sem necessidade de provisionar ou gerenciar servidores.  
+- Funciona baseado em **eventos**: o código é acionado quando ocorre um gatilho (ex.: upload no S3, alteração no DynamoDB, requisições via API Gateway, etc.).  
+- Suporta várias linguagens (Python, Node.js, Java, Go, entre outras).  
+- Escala automaticamente de acordo com a demanda.  
+- Modelo de cobrança: **pay-per-use**, ou seja, paga-se apenas pelo tempo de execução do código.
+- Intenção de receber informação e passar pra frente.
+- Usado em:  
+  - Processamento de dados em tempo real.  
+  - Automação de tarefas.  
+  - Criação de backends de aplicações leves.  
+
+### Amazon ECS e EKS
+- **ECS (Elastic Container Service):** serviço de orquestração de containers da AWS, podendo ser monolítico ou de microserviços.  
+  - Gerencia containers Docker de forma simplese é ideial para execução maiores de 15 minutos e fora das regios AWS.  
+  - Permite rodar aplicações em containers sem precisar gerenciar servidores diretamente com facil integração com outros sistemas.
+  - ECR é um serviço de registro de contêiner gerenciado para gerenciar imagens no docker.
+  - <img height="200" alt="Captura de tela 2025-09-26 115208" src="https://github.com/user-attachments/assets/12f053e5-aaba-4d5a-8f8a-4ca18c3829c2" />
+  
+- **EKS (Elastic Kubernetes Service):** serviço gerenciado de **Kubernetes**, faz praticamente a mesma coisa que o ECS só que com kubernetes.  
+  - Ideal para quem já utiliza Kubernetes e quer mais flexibilidade.  
+  - Escala aplicações em containers com alta disponibilidade.
+  - <img height="250" alt="Captura de tela 2025-09-26 120826" src="https://github.com/user-attachments/assets/38502459-1ff0-467a-af49-31d6b71d33ec" />
+
+### Amazon SNS e SQS
+- **SNS (Simple Notification Service): melhor parr usuários**  
+  - Serviço assíncrono de **pub/sub** para envio de mensagens FIFO.  
+  - Permite notificar múltiplos sistemas ou usuários ao mesmo tempo.  
+  - Usado para notificações push, SMS, emails e integrações com outros sistemas AWS.  
+- **SQS (Simple Queue Service): melhor para sistemas mais complexos**  
+  - Serviço de **fila de mensagens** totalmente gerenciado. As filas podem ser de diferentes tipos, como padrão e FIFO.  
+  - Garante a entrega assíncrona entre serviços desacoplados.  
+  - Usado para processar tarefas em segundo plano e gerenciar picos de requisições.  
+- **Tipo Padrão: não importa a ordem**.
+
+### AWS Step Functions
+- Serviço para **orquestração de fluxos de trabalho** (workflows).  
+- Permite coordenar múltiplos serviços da AWS em etapas definidas.  
+- Usa uma abordagem **visual e baseada em estados** para controlar a execução.  
+- Ideal para:  
+  - Automatizar processos complexos.  
+  - Integrar Lambda, ECS, SQS, DynamoDB e outros serviços.  
+  - Monitorar e depurar fluxos de execução.  
 
  
